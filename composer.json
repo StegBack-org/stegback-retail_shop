@@ -1,0 +1,29 @@
+{
+    "name": "stegback/retail_shop",
+    "description": "Reatil shop module to manage product sale on reatil or small shop.",
+    "type": "librarry",
+    "license": "MIT",
+
+    "keywords": [
+        "Stegback",
+        "stegback-retails-shop",
+        "retails-shop"
+    ],
+    "autoload": {
+
+        "psr-4": {
+            "Stegback\\RetailShop\\": "src/"
+        },
+        "files": [
+            "src/Helpers/CommonHelper.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Kartik Maandothiya and Himanshu Pandey | Stegback"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    }
+}
