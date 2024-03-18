@@ -1,6 +1,6 @@
 <?php
 
-namespace Stegback\RetailShop\app;
+namespace Stegback\RetailShop\Helpers;
 
 class CommonHelper
 {
