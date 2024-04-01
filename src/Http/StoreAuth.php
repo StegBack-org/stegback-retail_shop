@@ -71,9 +71,7 @@ class StoreAuth extends Controller
 
     protected function tempLoginAsStegback()
     {
-        $email = 'kartik@stegpearl.com';
-        $password = 'stegpearl@123';
-        Auth::attempt(['email' => $email, 'password' => $password]);
+
         auth()->loginUsingId(1);
         return true;
     }

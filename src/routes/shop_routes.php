@@ -19,6 +19,9 @@ Route::middleware(['auth'])->prefix('/retail-shop/manage/')->middleware('auth')-
     Route::get('/store_add', [StoreManage::class, 'store_add'])->name('store_add');
     Route::POST('/store_add', [StoreManage::class, 'store_save'])->name('store_save');
     Route::get('/assign-product', [StoreManage::class, 'assign_product'])->name('assign_product');
+    Route::post('/assign-product-store', [StoreManage::class, 'assign_product_store'])->name('assign_product_store');
+    Route::get('/sku/list/{id?}', [StoreManage::class, 'get_sku_list'])->name('get_sku_list');
+
     Route::get('/store-view', [StoreManage::class, 'store_view'])->name('store_view');
     Route::get('/logout', function () {
         Auth::logout();
@@ -37,6 +40,9 @@ Route::middleware(['auth:retail_shop'])->prefix('/retail-shop')->middleware('aut
      */
 
     Route::get('/order-list', [StoreDashboard::class, 'order_list'])->name('order_list');
+    Route::get('/order-create', [StoreDashboard::class, 'order_create'])->name('order_create');
+
+    Route::post('/order-store', [StoreDashboard::class, 'order_store'])->name('order_store');
     Route::get('/order-view/{order_id}', [StoreDashboard::class, 'order_view'])->name('order_view');
 
     /**
@@ -44,4 +50,6 @@ Route::middleware(['auth:retail_shop'])->prefix('/retail-shop')->middleware('aut
      */
     Route::get('/product-list', [StoreDashboard::class, 'product_list'])->name('product_list');
     Route::get('/product-view/{product_id?}', [StoreDashboard::class, 'product_view'])->name('product_view');
+
+    // Route::get('/get-history', [StoreManage::class, 'getHistory']);
 });

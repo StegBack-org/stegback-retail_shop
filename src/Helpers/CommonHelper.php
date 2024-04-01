@@ -20,4 +20,12 @@ class CommonHelper
         }
         return 'N/A';
     }
+
+    static function HistoryType()
+    {
+        return [
+            'store_product' => 'product',
+            'store_order' => 'order',
+        ];
+    }
 }
